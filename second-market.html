@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20221016114456">
 	<title>Transmute</title>
 </head>
 
@@ -43,7 +43,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EURO</span>
 					</li>
 				</ul>
@@ -69,17 +69,89 @@
 		<h2 class="popup__title">Connect a wallet</h2>		
 		<div class="connect-wallet-popup__items">
 			<button class="connect-wallet-popup__item">
-				<img src="img/metamask-icon.png" alt="">
+				<picture><source srcset="img/metamask-icon.webp" type="image/webp"><img src="img/metamask-icon.png" alt=""></picture>
 				Metamask
 			</button>
 			<button class="connect-wallet-popup__item">
-				<img src="img/coinbase-icon.png" alt="">
+				<picture><source srcset="img/coinbase-icon.webp" type="image/webp"><img src="img/coinbase-icon.png" alt=""></picture>
 				Coinbase Wallet
 			</button>
 		</div>		
 		<button class="popup__btn btn btn_secondary popup-close">
 			<span>Cancel</span>
 		</button>
+	</div>
+</div>
+	<div class="create-order-popup popup">
+	<div class="popup__container">
+		<button class="popup__close-button popup-close"></button>
+		<h2 class="popup__title">Create order</h2>		
+		<div class="create-order-popup__content">
+			<div class="input-container">
+				<label class="input-label">Token</label>
+				<div class="select select_regular">
+					<div class="select__button">Miami Gold Resort LP-REP</div>
+					<ul class="select__dropdown">
+						<li><a href="">Etherium</a></li>
+						<li><a href="">Bitcoin</a></li>
+						<li><a href="">TRON</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="input-container">
+				<label class="input-label">Miami Gold Resort LP-REP amount</label>
+				<input type="text" class="create-order-popup__amount text-input" placeholder="Amount">
+				<span class="input-container__additional-info">234 212 231 LP-REP</span>
+				<button class="input-container__max-btn">Max</button>
+			</div>
+			<div class="input-container">
+				<label class="input-label">Price</label>
+				<input type="text" class="text-input" placeholder="Price">
+				<span class="input-subscription">
+					You will receive: 0 USDT
+					<picture><source srcset="./img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="./img/token-icon.png" alt=""></picture>
+				</span>
+			</div>
+			<button class="create-order-popup__approve-btn popup__btn btn popup-close">
+				Approve
+			</button>
+		</div>		
+	</div>
+</div>
+	<div class="create-order-confirm-popup popup">
+	<div class="popup__container">
+		<button class="popup__close-button popup-close"></button>
+		<h2 class="popup__title">Create order</h2>		
+		<div class="create-order-popup__content">
+			<div class="input-container disabled">
+				<label class="input-label">Token</label>
+				<div class="select select_regular disabled">
+					<div class="select__button">Miami Gold Resort LP-REP</div>
+					<ul class="select__dropdown">
+						<li><a href="">Etherium</a></li>
+						<li><a href="">Bitcoin</a></li>
+						<li><a href="">TRON</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="input-container disabled">
+				<label class="input-label">Miami Gold Resort LP-REP amount</label>
+				<input type="text" class="create-order-popup__amount text-input" placeholder="Amount" disabled>
+				<span class="input-container__additional-info">234 212 231 LP-REP</span>
+				<button class="input-container__max-btn">Max</button>
+			</div>
+			<div class="input-container disabled">
+				<label class="input-label">Price</label>
+				<input type="text" class="text-input" placeholder="Price" disabled>
+				<span class="input-subscription">
+					You will receive: 0 USDT
+					<picture><source srcset="./img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="./img/token-icon.png" alt=""></picture>
+				</span>
+			</div>
+			<button class="create-order-popup__approve-btn popup__btn btn popup-close">
+				Confirm
+			</button>
+		</div>		
 	</div>
 </div>
 	
@@ -109,7 +181,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EUR</span>
 					</li>
 				</ul>
@@ -131,16 +203,17 @@
 			
 			<!-- Wrong network -->
 			<!-- <span class="header__cta-error">Wrong network</span> -->
-			
+						
 			<div class="header__cta-item">
 				<button class="header__wallet-btn header__cta-btn">
 					<img src="img/wallet-icon.svg" alt="">
 					<span class="header__cta-btn-content">Connect wallet</span>
-				</button>
+				</button>				
 				<ul class="header__cta-item-dropdown header__cta-item-dropdown_single">
-					<li><a href="">Log out</a></li>         
+					<li><a href="">Log out</a></li>
 				</ul>
-      </div>      			
+			</div>			
+			
 		</div>				
 	</div>
 
@@ -178,14 +251,96 @@
 
 			<div class="wrap">				
 				<div class="second-market">
+					<div class="second-market__my-orders">
+						<div class="second-market__header">
+							<h2 class="second-market__title page-title">My orders</h2>
+							<div class="second-market__header-filters">
+								<div class="second-market__header-filters-item select select_regular">
+									<button class="select__button">Sort by</button>
+									<ul class="select__dropdown">
+										<li><a href="">Name</a></li>
+										<li><a href="">Amount</a></li>
+									</ul>
+								</div>
+								<button class="second-market__header-filters-item btn btn_wide btn_secondary" id="createOrderButton">
+									<span>Create order</span>
+								</button>
+							</div>
+						</div>
+						<div class="second-market__content">
+							<div class="second-market__item card">
+	<div class="second-market__item-name card__name">
+		<h3 class="card__title">Miami Gold Resort LP-REP</h3>
+		<span class="card__subtitle card__subtitle_badge">Lennar Corporation</span>
+	</div>
+	<div class="second-market__item-params card__params">
+		<div class="card__params-item">
+			<span class="card__params-item-name">
+				Price per one token
+				<button class="info-button">?</button>
+			</span>
+			<span class="card__params-item-value card__params-item-value_primary">0,32$</span>
+		</div>
+		<div class="card__params-item">
+			<span class="card__params-item-name">
+				Object APY
+				<button class="info-button">?</button>
+			</span>
+			<span class="card__params-item-value card__params-item-value_primary">32%</span>
+		</div>
+		<div class="card__params-item">
+			<span class="card__params-item-name">
+				Date of order creation
+				<button class="info-button">?</button>
+			</span>
+			<span class="card__params-item-value">22.06.2022</span>
+		</div>
+		<div class="card__params-item">
+			<span class="card__params-item-name">
+				Date of LP expiration
+				<button class="info-button">?</button>
+			</span>
+			<span class="card__params-item-value">24.09.2025</span>
+		</div>
+	</div>
+	<div class="second-market__item-amount widget">
+		<div class="widget__content">
+			<span class="widget__title">Amount</span>
+			<span class="widget__value">
+				<span>34 312 345 LP-REP</span>
+				<span class="widget__value-gray">$4 321</span>
+			</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
+		</div>								
+	</div>
+	<div class="second-market__item-input input-container">
+		<label class="input-label">Miami Gold Resort LP-REP amount</label>
+		<input class="text-input" type="text" placeholder="Amount">
+		<span class="input-subscription">
+			You will pay: 0 USDT
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
+		</span>
+		<button class="input-container__max-btn">Max</button>
+	</div>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
+</div> }
+						</div>
+					</div>					
+					
 					<div class="second-market__header">
 						<h2 class="second-market__title page-title">Orders</h2>
 						<div class="second-market__header-filters">
 							<div class="second-market__header-filters-item select select_regular">
 								<button class="select__button">Sort by</button>
-								<div class="select__dropdown"></div>
+								<ul class="select__dropdown">
+									<li><a href="">Name</a></li>
+									<li><a href="">Amount</a></li>
+								</ul>
 							</div>							
-							<button class="second-market__header-filters-item btn btn_wide btn_secondary">
+							<button class="second-market__header-filters-item btn btn_wide btn_secondary" id="createOrderButton">
 								<span>Create order</span>
 							</button>
 						</div>
@@ -235,7 +390,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -243,11 +401,11 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 							<div class="second-market__item card">
@@ -292,7 +450,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -300,11 +461,11 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 							<div class="second-market__item card">
@@ -349,7 +510,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -357,11 +521,11 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 							<div class="second-market__item card">
@@ -406,7 +570,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -414,11 +581,11 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 							<div class="second-market__item card">
@@ -463,7 +630,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -471,11 +641,11 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 							<div class="second-market__item card">
@@ -520,7 +690,10 @@
 				<span>34 312 345 LP-REP</span>
 				<span class="widget__value-gray">$4 321</span>
 			</span>
-			<span class="widget__subscription"><b>5$ –</b> LP token predictible value at the expiration date</span>
+			<span class="second-market__item-subscription widget__subscription">
+				<b>5$</b>
+				<span>LP token predictible value<br>at the expiration date</span>
+			</span>
 		</div>								
 	</div>
 	<div class="second-market__item-input input-container">
@@ -528,20 +701,20 @@
 		<input class="text-input" type="text" placeholder="Amount">
 		<span class="input-subscription">
 			You will pay: 0 USDT
-			<img class="input-subscription-icon" src="img/token-icon.png" alt="">
+			<picture><source srcset="img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="img/token-icon.png" alt=""></picture>
 		</span>
 		<button class="input-container__max-btn">Max</button>
 	</div>
-	<button class="btn btn_wide">Buy</button>
+	<button class="second-market__buy-btn btn btn_wide">Buy</button>
 </div>
 						
 												
-					</div>
+					</div>					
 				</div>
 			</div>
 
 		</div>
 	</main>	
-	<script src="./js/app.min.js"></script>
+	<script src="./js/app.min.js?_v=20221016114456"></script>
 </body>
 </html>

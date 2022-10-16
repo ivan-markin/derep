@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20221016114456">
 	<title>Governance</title>
 </head>
 
@@ -43,7 +43,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EURO</span>
 					</li>
 				</ul>
@@ -69,11 +69,11 @@
 		<h2 class="popup__title">Connect a wallet</h2>		
 		<div class="connect-wallet-popup__items">
 			<button class="connect-wallet-popup__item">
-				<img src="img/metamask-icon.png" alt="">
+				<picture><source srcset="img/metamask-icon.webp" type="image/webp"><img src="img/metamask-icon.png" alt=""></picture>
 				Metamask
 			</button>
 			<button class="connect-wallet-popup__item">
-				<img src="img/coinbase-icon.png" alt="">
+				<picture><source srcset="img/coinbase-icon.webp" type="image/webp"><img src="img/coinbase-icon.png" alt=""></picture>
 				Coinbase Wallet
 			</button>
 		</div>		
@@ -109,7 +109,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EUR</span>
 					</li>
 				</ul>
@@ -131,16 +131,17 @@
 			
 			<!-- Wrong network -->
 			<!-- <span class="header__cta-error">Wrong network</span> -->
-			
+						
 			<div class="header__cta-item">
 				<button class="header__wallet-btn header__cta-btn">
 					<img src="img/wallet-icon.svg" alt="">
 					<span class="header__cta-btn-content">Connect wallet</span>
-				</button>
+				</button>				
 				<ul class="header__cta-item-dropdown header__cta-item-dropdown_single">
-					<li><a href="">Log out</a></li>         
+					<li><a href="">Log out</a></li>
 				</ul>
-      </div>      			
+			</div>			
+			
 		</div>				
 	</div>
 
@@ -178,7 +179,29 @@
 
 			<div class="wrap">				
 				<div class="governance">
-					<h2 class="governance__title page-title">Recent proposals</h2>
+					<div class="governance__header">
+						<div class="governance__header-title-block">
+							<h2 class="governance__title page-title">Recent proposals</h2>
+							<div class="governance__header-buttons">
+								<button class="btn btn_small">All proposals</button>
+								<button class="btn btn_small">All discussions</button>
+							</div>
+						</div>
+						<div class="dashboard__filter filter">
+							<label class="filter__item">
+								<input class="filter__input" type="radio" name="timeScale" checked>
+								<span class="filter__button">All (7)</span>
+							</label>
+							<label class="filter__item">
+								<input class="filter__input" type="radio" name="timeScale">
+								<span class="filter__button">Active (2)</span>
+							</label>
+							<label class="filter__item">
+								<input class="filter__input" type="radio" name="timeScale">
+								<span class="filter__button">Closed (5)</span>
+							</label>						
+						</div>
+					</div>					
 					<div class="governance__content">
 						<div class="governance__table-container">
 							<table class="governance__table">
@@ -416,6 +439,6 @@
 
 		</div>
 	</main>	
-	<script src="./js/app.min.js"></script>
+	<script src="./js/app.min.js?_v=20221016114456"></script>
 </body>
 </html>

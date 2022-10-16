@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20221016114456">
 	<title>Staking & Farming</title>
 </head>
 
@@ -43,7 +43,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EURO</span>
 					</li>
 				</ul>
@@ -69,11 +69,11 @@
 		<h2 class="popup__title">Connect a wallet</h2>		
 		<div class="connect-wallet-popup__items">
 			<button class="connect-wallet-popup__item">
-				<img src="img/metamask-icon.png" alt="">
+				<picture><source srcset="img/metamask-icon.webp" type="image/webp"><img src="img/metamask-icon.png" alt=""></picture>
 				Metamask
 			</button>
 			<button class="connect-wallet-popup__item">
-				<img src="img/coinbase-icon.png" alt="">
+				<picture><source srcset="img/coinbase-icon.webp" type="image/webp"><img src="img/coinbase-icon.png" alt=""></picture>
 				Coinbase Wallet
 			</button>
 		</div>		
@@ -109,7 +109,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EUR</span>
 					</li>
 				</ul>
@@ -131,16 +131,17 @@
 			
 			<!-- Wrong network -->
 			<!-- <span class="header__cta-error">Wrong network</span> -->
-			
+						
 			<div class="header__cta-item">
 				<button class="header__wallet-btn header__cta-btn">
 					<img src="img/wallet-icon.svg" alt="">
 					<span class="header__cta-btn-content">Connect wallet</span>
-				</button>
+				</button>				
 				<ul class="header__cta-item-dropdown header__cta-item-dropdown_single">
-					<li><a href="">Log out</a></li>         
+					<li><a href="">Log out</a></li>
 				</ul>
-      </div>      			
+			</div>			
+			
 		</div>				
 	</div>
 
@@ -201,7 +202,7 @@
 								</div>
 								<div class="widget__content">
 									<span class="widget__title"></span>
-									<span class="widget__value">3 942 312 REP</span>
+									<span class="widget__value" style="opacity: .25;">3 942 312 REP</span>
 								</div>
 							</div>
 						</div>
@@ -222,7 +223,7 @@
 							<h2 class="page-title">Withdrawl</h2>
 							<div class="staking-farming__withdrawl widget widget_large">
 								<div class="widget__header">
-									<div class="page-tabs">
+									<div class="staking-farming__withdrawl-tabs page-tabs">
 										<a class="page-tabs__item active" href="">Claim reward</a>
 										<a class="page-tabs__item" href="">Withdraw LP tokens</a>
 									</div>
@@ -255,7 +256,7 @@
 										<div class="farming__slide-item farming__slide-item_primary widget">
 											<div class="widget__content">
 												<div class="farming__slide-item-title">
-													<img class="farming__slide-icon" src="img/farming-logo.png" alt="">
+													<picture><source srcset="img/farming-logo.webp" type="image/webp"><img class="farming__slide-icon" src="img/farming-logo.png" alt=""></picture>
 													<span class="farming__slide-value widget__value">UNISWAP Pool</span>
 												</div>
 												<a class="external-link" href="">View contract</a>
@@ -311,7 +312,7 @@
 										<div class="farming__slide-item farming__slide-item_primary widget">
 											<div class="widget__content">
 												<div class="farming__slide-item-title">
-													<img class="farming__slide-icon" src="img/farming-logo.png" alt="">
+													<picture><source srcset="img/farming-logo.webp" type="image/webp"><img class="farming__slide-icon" src="img/farming-logo.png" alt=""></picture>
 													<span class="farming__slide-value">UNISWAP Pool</span>
 												</div>
 												<a class="external-link" href="">View contract</a>
@@ -385,15 +386,15 @@
 								<div class="staking-farming__withdrawl widget widget_large">
 									<div class="widget__header">
 										<div class="page-tabs">
-											<a class="page-tabs__item active" href="">Claim reward</a>
-											<a class="page-tabs__item" href="">Withdraw LP tokens</a>
+											<a class="page-tabs__item page-tabs__item_withdrawl page-tabs__item active" href="">Claim reward</a>
+											<a class="page-tabs__item page-tabs__item_withdrawl" href="">Withdraw LP tokens</a>
 										</div>
 									</div>
-									<div class="widget">
-										<div class="widget__content">
-											<span class="widget__title">Amount</span>
-											<span class="widget__value">234 831 REP</span>
-										</div>									
+									<div class="input-container">
+										<span class="input-label">Amount</span>
+										<input class="text-input" type="text" placeholder="Amount">
+										<span class="input-subscription">Balance: 234 831 LP-REP</span>
+										<button class="input-container__max-btn input-container__max-btn_withdrawl">Max</button>
 									</div>
 									<button class="widget__button btn btn_secondary">
 										<span>Claim</span>
@@ -407,6 +408,6 @@
 
 		</div>
 	</main>	
-	<script src="./js/app.min.js"></script>
+	<script src="./js/app.min.js?_v=20221016114456"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.min.css">
+	<link rel="stylesheet" href="./css/style.min.css?_v=20221016114456">
 	<title>Transmute</title>
 </head>
 
@@ -43,7 +43,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EURO</span>
 					</li>
 				</ul>
@@ -69,11 +69,11 @@
 		<h2 class="popup__title">Connect a wallet</h2>		
 		<div class="connect-wallet-popup__items">
 			<button class="connect-wallet-popup__item">
-				<img src="img/metamask-icon.png" alt="">
+				<picture><source srcset="img/metamask-icon.webp" type="image/webp"><img src="img/metamask-icon.png" alt=""></picture>
 				Metamask
 			</button>
 			<button class="connect-wallet-popup__item">
-				<img src="img/coinbase-icon.png" alt="">
+				<picture><source srcset="img/coinbase-icon.webp" type="image/webp"><img src="img/coinbase-icon.png" alt=""></picture>
 				Coinbase Wallet
 			</button>
 		</div>		
@@ -81,7 +81,7 @@
 			<span>Cancel</span>
 		</button>
 	</div>
-</div>
+</div>	
 	
 	<header class="header">
 	<a class="header__logo" href="/">
@@ -109,7 +109,7 @@
 						<span>USD</span>
 					</li>
 					<li class="select__dropdown-item">
-						<img src="img/euro-icon.png" alt="">
+						<picture><source srcset="img/euro-icon.webp" type="image/webp"><img src="img/euro-icon.png" alt=""></picture>
 						<span>EUR</span>
 					</li>
 				</ul>
@@ -131,16 +131,17 @@
 			
 			<!-- Wrong network -->
 			<!-- <span class="header__cta-error">Wrong network</span> -->
-			
+						
 			<div class="header__cta-item">
 				<button class="header__wallet-btn header__cta-btn">
 					<img src="img/wallet-icon.svg" alt="">
 					<span class="header__cta-btn-content">Connect wallet</span>
-				</button>
+				</button>				
 				<ul class="header__cta-item-dropdown header__cta-item-dropdown_single">
-					<li><a href="">Log out</a></li>         
+					<li><a href="">Log out</a></li>
 				</ul>
-      </div>      			
+			</div>			
+			
 		</div>				
 	</div>
 
@@ -212,7 +213,7 @@
 
 					<div class="transmute__content">
 						<div class="transmute__item card">
-							<img class="transmute__item-image" src="img/object-page-gallery/image-2.jpg" alt="">
+							<picture><source srcset="img/object-page-gallery/image-2.webp" type="image/webp"><img class="transmute__item-image" src="img/object-page-gallery/image-2.jpg" alt=""></picture>
 							<div class="transmute__item-name card__name">
 								<h3 class="transmute__item-title card__title">Miami Gold Resort LP-REP</h3>
 								<span class="card__subtitle card__subtitle_badge">Lennar Corporation</span>
@@ -241,30 +242,20 @@
 								</div>
 							</div>
 							<div class="transmute__card-tabs card-tabs">
-								<a class="card-tabs__item active">Borrow</a>
-								<a class="card-tabs__item" href="">Pay back the debt</a>
+								<a class="card-tabs__item">Borrow</a>
+								<a class="card-tabs__item active" href="">Pay back the debt</a>
 							</div>
-							<div class="transmute__inputs">
-								<div class="input-container">
-									<label class="input-label">Token</label>
-									<div class="select select_regular">
-										<div class="select__button">USDT</div>
-										<div class="select__dropdown"></div>
-									</div>
-									<span class="input-subscription">
-										You will receive: 0 USDT
-										<img class="input-subscription-icon" src="./img/token-icon.png" alt="">
-									</span>									
-								</div>
-								<div class="input-container">
-									<label class="input-label"><b>Miami Gold Resort LP-REP</b> amount</label>
-									<input class="text-input" type="text" placeholder="Amount">
-								</div>
+							<div class="transmute__item-payback">
+								<h3 class="transmute__item-payback-title">
+									You did not take out a secured loan<br>
+									<b>Miami Gold Resort LP-REP</b>
+								</h3>
+								<button class="btn">Go to borrow</button>
 							</div>
 						</div>
 
 						<div class="transmute__item card">
-							<img class="transmute__item-image" src="img/object-page-gallery/image-2.jpg" alt="">
+							<picture><source srcset="img/object-page-gallery/image-2.webp" type="image/webp"><img class="transmute__item-image" src="img/object-page-gallery/image-2.jpg" alt=""></picture>
 							<div class="transmute__item-name card__name">
 								<h3 class="transmute__item-title card__title">Miami Gold Resort LP-REP</h3>
 								<span class="card__subtitle card__subtitle_badge">Lennar Corporation</span>
@@ -301,17 +292,18 @@
 									<label class="input-label">Token</label>
 									<div class="select select_regular">
 										<div class="select__button">USDT</div>
-										<div class="select__dropdown"></div>
+										<ul class="select__dropdown">
+											<li><a href="">Etherium</a></li>
+											<li><a href="">Bitcoin</a></li>
+											<li><a href="">TRON</a></li>											
+										</ul>
 									</div>
 									<span class="input-subscription">
 										You will receive: 0 USDT
-										<img class="input-subscription-icon" src="./img/token-icon.png" alt="">
+										<picture><source srcset="./img/token-icon.webp" type="image/webp"><img class="input-subscription-icon" src="./img/token-icon.png" alt=""></picture>
 									</span>									
 								</div>
-								<div class="input-container">
-									<label class="input-label"><b>Miami Gold Resort LP-REP</b> amount</label>
-									<input class="text-input" type="text" placeholder="Amount">
-								</div>
+								<button class="btn btn_wide">Borrow</button>
 							</div>
 						</div>
 					</div>
@@ -320,6 +312,6 @@
 
 		</div>
 	</main>	
-	<script src="./js/app.min.js"></script>
+	<script src="./js/app.min.js?_v=20221016114456"></script>
 </body>
 </html>
