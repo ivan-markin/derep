@@ -1224,7 +1224,7 @@ template {
 }
 
 .no-webp .content {
-  background: url("../../img/content-bg.jpg") no-repeat top; }
+  background: url("../../img/content-bg.jpg") repeat-y top; }
 
 .content {
   -webkit-box-flex: 1;
@@ -4669,4 +4669,4 @@ body {
   }
 }
 
-.webp .content { background: url(../../img/content-bg.webp) no-repeat top; }
+.webp .content { background: url(../../img/content-bg.webp) repeat-y top; }
