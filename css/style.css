@@ -1224,12 +1224,13 @@ template {
 }
 
 .no-webp .content {
-  background: url("../../img/content-bg.jpg") repeat-y top; }
+  background-image: url("../../img/content-bg.jpg"); }
 
 .content {
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
+  background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 60px;
 }
@@ -4669,4 +4670,4 @@ body {
   }
 }
 
-.webp .content { background: url(../../img/content-bg.webp) repeat-y top; }
+.webp .content { background-image: url(../../img/content-bg.webp); }
