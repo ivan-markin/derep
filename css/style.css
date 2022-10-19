@@ -3,6 +3,7 @@
   --hover-color: #5B6CFF;
   --table-cnt-width: auto;
   --slider-width: auto;
+  --card-slider-width: auto;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1879,10 +1880,60 @@ template {
   margin: 0 0 40px;
 }
 
+.position-card {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .position-card__image {
   width: 100%;
   border-radius: 9px;
+  -o-object-position: cover;
+     object-position: cover;
+  overflow-x: hidden;
   margin-bottom: 16px;
+}
+
+.position-card__slider {
+  width: 100%;
+  position: relative;
+}
+
+.position-card__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+  position: absolute;
+  bottom: 24px;
+  z-index: 9999999;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.position-card__pagination .swiper-pagination-bullet {
+  height: 190px;
+  width: 100%;
+  position: relative;
+}
+
+.position-card__pagination .swiper-pagination-bullet::after {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.position-card__pagination .swiper-pagination-bullet-active::after {
+  opacity: 1;
 }
 
 .card {
@@ -4006,6 +4057,12 @@ template {
   padding-right: 24px;
 }
 
+.position-card-swiper {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 *,
 *::before,
 *::after {
@@ -4544,6 +4601,10 @@ body {
 
   .cards-gallery__empty-title {
     width: 80%;
+  }
+
+  .position-card__pagination .swiper-pagination-bullet {
+    height: 4px;
   }
 
   .widgets_hor {
